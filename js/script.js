@@ -37,24 +37,21 @@ focoBt.addEventListener('click', ()=> {
     tempoDecorridoEmSegundos = 1500
     alterarContexto('foco')
     focoBt.classList.add('active')
-    // html.setAttribute('data-contexto', 'foco')
-    // banner.setAttribute('src', '/imagens/foco.png')
+
 })
 
 curtoBt.addEventListener('click', ()=> {
     tempoDecorridoEmSegundos = 300
     alterarContexto('descanso-curto')
     curtoBt.classList.add('active')
-    // html.setAttribute('data-contexto', 'descanso-curto')
-    // banner.setAttribute('src', '/imagens/descanso-curto.png')
+
 })
 
 longoBt.addEventListener('click', () => {
     tempoDecorridoEmSegundos = 900
     alterarContexto('descanso-longo')
     longoBt.classList.add('active')
-    // html.setAttribute('data-contexto', 'descanso-longo')
-    // banner.setAttribute('src', '/imagens/descanso-longo.png')
+
 })
 
 function alterarContexto(contexto) {
@@ -100,7 +97,6 @@ const contagemRegressiva = () => {
         return
     }
     tempoDecorridoEmSegundos -= 1
-    // console.log(`Id: ${intervaloId}`)
     mostraTempo()
 }
 
