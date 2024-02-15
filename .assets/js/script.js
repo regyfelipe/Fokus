@@ -13,8 +13,8 @@ const startPauseBt = document.querySelector('#start-pause')
 const musicaFocoInput = document.querySelector('#alternar-musica');
 const iniciarOuPausaBt = document.querySelector('#start-pause span')
 const musica = new Audio('/sons/luna-rise-part-one.mp3');
-const audioPlay = new Audio('/sons/play.wav');
-const audioPausa = new Audio('/sons/pause.mp3');
+const audioPlay = new Audio('./sons/play.wav');
+const audioPausa = new Audio('./sons/pause.mp3');
 const audioTempoFinalizado = new Audio('./sons/beep.mp3')
 
 
@@ -109,20 +109,20 @@ startPauseBt.addEventListener('click', iniciarOuPausa)
 function iniciarOuPausa() {
     if(intervaloId) {
         audioPausa.play();
-        playEPause.setAttribute('src', '/imagens/pause.png')
+        playEPause.setAttribute('src', './imagens/pause.png')
         zerar()
         return
     }
     audioPlay.play();
     intervaloId = setInterval(contagemRegressiva, 1000) //1s
     iniciarOuPausaBt.textContent = "Pausar"
-    playEPause.setAttribute('src', '/imagens/pause.png')
+    playEPause.setAttribute('src', './imagens/pause.png')
 
 }
 
 function zerar() {
     clearInterval(intervaloId)
-    playEPause.setAttribute('src', '/imagens/play_arrow.png')
+    playEPause.setAttribute('src', './imagens/play_arrow.png')
     iniciarOuPausaBt.textContent = "Começar"
     intervaloId = null
 }
